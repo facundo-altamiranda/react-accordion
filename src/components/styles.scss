@@ -1,0 +1,39 @@
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.accordion {
+  background-color: #fefffa;
+  border-top: 5px solid #3f93e6;
+  line-height: 1.6;
+  box-shadow: 5px 5px 10px 0px #a4bac1;
+  
+  &__item {
+    border-bottom: 1px solid #dce7eb;
+  }
+  
+  &__title {
+    cursor: pointer;
+    &--selected {
+      border-bottom: 3px solid #78e63f;
+    }
+  }
+
+  &__arrow {
+    padding: 5px;
+    float: right;
+    transition: all 0.5s linear;
+    
+    &--selected {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__content {
+    &--selected {
+      animation: fadeIn 0.5s;
+    }
+  }
+
+}
